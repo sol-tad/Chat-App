@@ -9,7 +9,7 @@
 <section class="form signup">
   <header>Realtime Chat app </header>
 
-  <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+  <form action="users.php" method="post" enctype="multipart/form-data" autocomplete="off">
 
 <div class="error-text"></div>
 <div class="name-details">
@@ -51,5 +51,6 @@
 </div>
 
 <script type="text/javascript" src="js/pass-show-hide.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
 </body>
 </html>
