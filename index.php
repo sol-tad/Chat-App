@@ -30,6 +30,7 @@
  <div class="field input">
 <label for=""> Password </label>
    <input type="password" name="password" placeholder="Enter New Password" required>
+   <i class=" fas fa-eye"></i>
  </div>
 
  <div class="field image">
@@ -49,5 +50,6 @@
 
 </div>
 
+<script type="text/javascript" src="js/pass-show-hide.js"></script>
 </body>
 </html>
