@@ -3,7 +3,7 @@ const form = document.querySelector(".signup form"),
   errorText = form.querySelector(".error-text");
 
 form.onsubmit = (e) => {
-  e.preventDefault();
+  // e.preventDefault();
 };
 
 continueBtn.onclick = () => {
