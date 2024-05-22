@@ -1,9 +1,20 @@
 <?php 
     session_start();
     include_once "config.php";
+    if(isset($_COOKIE['emailid'])&&isset($_COOKIE['password'])){
+       $emailid=$_COOKIE['emailid']; 
+       $password=$_COOKIE['password']; 
+    }else{
+         $emailid=$password="";
+    }
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     if(!empty($email) && !empty($password)){
+        if(isset($_REQUEST['rememberMe'])){
+            setcookie('emailid',$_REQUEST['email'],time()+2000);
+            setcookie('password',$_REQUEST['password'],time()+2000);
+        }
+
         $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
         if(mysqli_num_rows($sql) > 0){
             $row = mysqli_fetch_assoc($sql);
